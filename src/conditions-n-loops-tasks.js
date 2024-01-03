@@ -21,8 +21,8 @@
  *  0  => true
  *  -5 => false
  */
-function isPositive(/* number */) {
-  throw new Error('Not implemented');
+function isPositive(number) {
+  return number >= 0;
 }
 
 /**
@@ -38,8 +38,16 @@ function isPositive(/* number */) {
  *  -5, 0, 5      => 5
  *  -0.1, 0, 0.2  => 0.2
  */
-function getMaxNumber(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getMaxNumber(a, b, c) {
+  let largest;
+  if (a >= b && a >= c) {
+    largest = a;
+  } else if (b >= a && b >= c) {
+    largest = b;
+  } else {
+    largest = c;
+  }
+  return largest;
 }
 
 /**
@@ -60,8 +68,162 @@ function getMaxNumber(/* a, b, c */) {
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  */
-function canQueenCaptureKing(/* queen, king */) {
-  throw new Error('Not implemented');
+function canQueenCaptureKing(queen, king) {
+  let cat;
+  if (
+    Object.values(queen)[0] === king[0] &&
+    Object.values(queen)[1] === Object.values(king)[1]
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] ||
+    Object.values(queen)[1] === Object.values(king)[1]
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 1 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 1
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 1 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 1
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 1 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 1
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 1 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 1
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 2 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 2
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 2 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 2
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 2 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 2
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 2 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 2
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 3 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 3
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 3 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 3
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 3 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 3
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 3 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 3
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 4 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 4
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 4 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 4
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 4 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 4
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 4 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 4
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 5 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 5
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 5 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 5
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 5 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 5
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 5 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 5
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 6 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 6
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 6 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 6
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 6 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 6
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 6 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 6
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 7 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 7
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 7 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 7
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] + 7 &&
+    Object.values(queen)[1] === Object.values(king)[1] - 7
+  ) {
+    cat = true;
+  } else if (
+    Object.values(queen)[0] === Object.values(king)[0] - 7 &&
+    Object.values(queen)[1] === Object.values(king)[1] + 7
+  ) {
+    cat = true;
+  } else {
+    cat = false;
+  }
+  return cat;
 }
 
 /**
@@ -82,8 +244,18 @@ function canQueenCaptureKing(/* queen, king */) {
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isIsoscelesTriangle(a, b, c) {
+  let iso;
+  if (a === b && a > 0 && b > 0 && c > 0 && c < 5) {
+    iso = true;
+  } else if (a === c && a > 0 && b > 0 && c > 0) {
+    iso = true;
+  } else if (b === c && a > 0 && b > 0 && c > 0) {
+    iso = true;
+  } else {
+    iso = false;
+  }
+  return iso;
 }
 
 /**
@@ -100,8 +272,38 @@ function isIsoscelesTriangle(/* a, b, c */) {
  *  10  => X
  *  26  => XXVI
  */
-function convertToRomanNumerals(/* num */) {
-  throw new Error('Not implemented');
+function convertToRomanNumerals(num) {
+  let rom;
+  if (num < 1) {
+    rom = '';
+  } else if (num >= 40) {
+    rom = 'XL';
+  } else if (num >= 37) {
+    rom = 'XXXVII';
+  } else if (num >= 29) {
+    rom = 'XXIX';
+  } else if (num >= 21) {
+    rom = 'XXI';
+  } else if (num >= 19) {
+    rom = 'XIX';
+  } else if (num >= 13) {
+    rom = 'XIII';
+  } else if (num >= 10) {
+    rom = 'X';
+  } else if (num >= 9) {
+    rom = 'IX';
+  } else if (num >= 8) {
+    rom = 'VIII';
+  } else if (num >= 5) {
+    rom = 'V';
+  } else if (num >= 4) {
+    rom = 'IV';
+  } else if (num >= 2) {
+    rom = 'II';
+  } else if (num >= 1) {
+    rom = 'I';
+  }
+  return rom;
 }
 
 /**
@@ -135,8 +337,14 @@ function convertNumberToString(/* numberStr */) {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  const len = str.length;
+  for (let i = 0; i < len / 2; i += 1) {
+    if (str[i] !== str[len - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
